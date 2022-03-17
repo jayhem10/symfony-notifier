@@ -1,16 +1,16 @@
 framework:
     notifier:
-        #chatter_transports:
-        #    slack: '%env(SLACK_DSN)%'
+        chatter_transports:
+            slack: '%env(SLACK_DSN)%'
         #    telegram: '%env(TELEGRAM_DSN)%'
-        #texter_transports:
-        #    twilio: '%env(TWILIO_DSN)%'
+        texter_transports:
+            ovhcloud: '%env(OVHCLOUD_DSN)%'
         #    nexmo: '%env(NEXMO_DSN)%'
         channel_policy:
             # use chat/slack, chat/telegram, sms/twilio or sms/nexmo
-            urgent: ['email']
+            urgent: ['sms/ovhcloud']
             high: ['email']
-            medium: ['email']
-            low: ['email']
+            medium: ['chat/slack']
+            low: ['browser']
         admin_recipients:
-            - { email: admin@example.com }
+            - { email: noble.jka@protonmail.com }

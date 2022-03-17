@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!
+{% endblock %}
+
+{% block body %}
+
+    <div class="title">
+		<h1>SYMFONY  NOTIFIER</h1>
+    </div>
+	<div class="container">
+
+		<div class="mt-5">
+			<h1>Test de symfony-notifier</h1>
+		</div>
+		<div>
+			<h3 class="my-3"># Documentation et liens</h3>
+		</div>
+		<div>
+        <ul>
+            <li><p>Documentation symfony : <a href="https://symfony.com/doc/current/notifier.html">Créer et envoyer des notifications</a></p></li>
+            <li><p>Projet : <a href="https://github.com/jayhem10/symfony-notifier">Repo Git</a></p></li>
+            <li><p>Mailer : <a href="https://symfony.com/doc/current/mailer.html">Envoyer des mails</a></p></li>
+            <li><p>SMS : <a href="https://symfony.com/doc/current/notifier/texters.html">Envoyer des SMS</a></p></li>
+            <li><p>Chat : <a href="https://symfony.com/doc/current/notifier/chatters.html">Envoyer des chats</a></p></li>
+        
+		</ul>           
+		</div>
+
+        <div>
+			<h3 class="my-3"># Mise en place</h3>
+            <ul>
+            <li><p>Installer le notifier : composer require symfony/notifier </p></li>
+            <li><p>Installer les services désirés</p></li>
+            <li><p>Mettre à jour le .env</p></li>
+			<img src="{{ asset('/images/2.png') }}" alt="env">
+			<li class="mt-3"><p>Mettre à jour le notifier.yaml</p></li>
+			<img src="{{ asset('/images/2.png') }}" alt="env">
+        </ul>   
+		</div>
+
+		<div>
+			<h3 class="mt-3"># Tests</h3>
+		</div>
+		<table class="table table-dark table-hover my-3">
+			<thead>
+				<tr>
+                    <th scope="col">INFOS</th>
+					<th scope="col">URGENT</th>
+					<th scope="col">HIGH</th>
+					<th scope="col">MEDIUM</th>
+					<th scope="col">LOW</th>
+				</tr>
+			</thead>
+			<tbody>
+            	<tr>
+					<th scope="row">Route</th>
+					<td>/invoice/create/urgent</td>
+					<td>/invoice/create/high</td>
+					<td>/invoice/create/medium</td>
+					<td>/invoice/create/low</td>
+				</tr>
+				<tr>
+					<th scope="row">Canaux</th>
+					<td>['sms']</td>
+					<td>['email']</td>
+					<td>['chat/slack']</td>
+					<td>['browser']</td>
+				</tr>
+				<tr>
+					<th scope="row">Config</th>
+					<td>OVHCLOUD_DSN</td>
+					<td>MAILER_DSN</td>
+					<td>SLACK_DSN</td>
+					<td>/</td>
+				</tr>
+                <tr>
+					<th scope="row">Installation</th>
+					<td>composer require symfony/ovh-cloud-notifier</td>
+					<td>composer require symfony/mailer</td>
+					<td>composer require symfony/discord-notifier</td>
+					<td>/</td>
+				</tr>
+                <tr>
+					<th scope="row">Bouton</th>
+					<td><a class="btn btn-primary" href="{{ path('urgent')}}" role="button">URGENT</a></td>
+					<td><a class="btn btn-primary" href="{{ path('high')}}" role="button">HIGH</a></td>
+					<td><a class="btn btn-primary" href="{{ path('medium')}}" role="button">MEDIUM</a></td>
+					<td><a class="btn btn-primary" href="{{ path('low')}}" role="button">LOW</a></td>
+				</tr>
+			</tbody>
+		</table>
+
+        <div>
+			<h3 class="my-3"># Custom</h3>
+            <p class="my-2">En écrasant des classes existantes, on peut personnaliser ses notifications</p>
+        <ul>
+			<li class="my-2"><a class="btn btn-primary btn-sm" href="{{ path('email_custom')}}" role="button">EMAIL CUSTOM</a> Email personnalisé </li>
+            <li class="my-2"><a class="btn btn-primary btn-sm" href="{{ path('slack_custom')}}" role="button">SLACK CUSTOM</a> Message Chat Personnalisé</li>
+            <li class="my-2"><a class="btn btn-primary btn-sm" href="{{ path('sms_custom')}}" role="button">SMS CUSTOM</a> Sms personnalisé </li>
+			<li class="my-2"><a class="btn btn-primary btn-sm" href="{{ path('email_slack_custom')}}" role="button">EMAIL SLACK CUSTOM</a> Envoi d'un email + chat personnalisé</li>
+        </ul>   
+		</div>
+
+	</div>
+{% endblock %}

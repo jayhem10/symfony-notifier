@@ -1,4 +1,7 @@
 {
+    "dflydev/dot-access-data": {
+        "version": "v3.0.1"
+    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -83,8 +86,23 @@
     "laminas/laminas-code": {
         "version": "4.5.1"
     },
+    "league/commonmark": {
+        "version": "2.2.3"
+    },
+    "league/config": {
+        "version": "v1.1.1"
+    },
+    "lorenzo/pinky": {
+        "version": "1.0.5"
+    },
     "monolog/monolog": {
         "version": "2.4.0"
+    },
+    "nette/schema": {
+        "version": "v1.2.2"
+    },
+    "nette/utils": {
+        "version": "v3.2.7"
     },
     "nikic/php-parser": {
         "version": "v4.13.2"
@@ -152,6 +170,9 @@
             "bin/console"
         ]
     },
+    "symfony/css-selector": {
+        "version": "v6.0.3"
+    },
     "symfony/debug-bundle": {
         "version": "6.0",
         "recipe": {
@@ -169,6 +190,15 @@
     },
     "symfony/deprecation-contracts": {
         "version": "v3.0.0"
+    },
+    "symfony/discord-notifier": {
+        "version": "6.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "5.2",
+            "ref": "1bbc2f7c212346491efde98bf55a3f689056ed3f"
+        }
     },
     "symfony/doctrine-bridge": {
         "version": "v6.0.6"
@@ -312,6 +342,15 @@
     "symfony/options-resolver": {
         "version": "v6.0.3"
     },
+    "symfony/ovh-cloud-notifier": {
+        "version": "6.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "5.1",
+            "ref": "71809b3735a012a6359e9f48aa373b2680c3da54"
+        }
+    },
     "symfony/password-hasher": {
         "version": "v6.0.3"
     },
@@ -387,6 +426,15 @@
     },
     "symfony/service-contracts": {
         "version": "v3.0.0"
+    },
+    "symfony/slack-notifier": {
+        "version": "6.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "5.2",
+            "ref": "192bc241a3095c6861353e5a7a652ad35659ca92"
+        }
     },
     "symfony/stopwatch": {
         "version": "v6.0.5"
@@ -494,7 +542,22 @@
     "symfony/yaml": {
         "version": "v6.0.3"
     },
+    "tijsverkoyen/css-to-inline-styles": {
+        "version": "2.2.4"
+    },
+    "twbs/bootstrap": {
+        "version": "v5.0.2"
+    },
+    "twig/cssinliner-extra": {
+        "version": "v3.3.5"
+    },
     "twig/extra-bundle": {
+        "version": "v3.3.8"
+    },
+    "twig/inky-extra": {
+        "version": "v3.3.5"
+    },
+    "twig/markdown-extra": {
         "version": "v3.3.8"
     },
     "twig/twig": {
