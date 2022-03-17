@@ -24,7 +24,7 @@ Installation
 
 Informations complémentaires
 -------------
-* Lancer le projet pour lancer la page de test et les informations techiques ;)
+* Lancer le projet pour accéder à la page de test et les informations techiques ;)
 
 
 Documentation

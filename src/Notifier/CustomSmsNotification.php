@@ -19,7 +19,6 @@ SmsNotificationInterface
     public function asSmsMessage(SmsRecipientInterface $recipient, string $transport = null): ?SmsMessage
     {
         if ($transport == 'ovhcloud') {
-            dump($transport);
 
             $message = SmsMessage::fromNotification($this, $recipient, $transport);
             $message->subject('test envoi sms perso');

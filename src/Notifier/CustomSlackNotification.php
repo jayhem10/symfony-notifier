@@ -19,10 +19,7 @@ class CustomSlackNotification extends Notification implements
 
     }
 
-    public function asChatMessage(
-        RecipientInterface $recipient,
-        string $transport = null
-    ): ?ChatMessage {
+    public function asChatMessage(RecipientInterface $recipient,string $transport = null): ?ChatMessage {
         
         if ($transport == 'slack') {
         // Add a custom emoji if the message is sent to Slack
